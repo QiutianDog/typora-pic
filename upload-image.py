@@ -1,6 +1,6 @@
 import base64
 import json
-from random import Random
+import random
 
 import requests
 import os.path
@@ -28,7 +28,7 @@ class GiteaUploader:
                     filepath=filepath, token=self.token)
 
     def get_random_filename(self, image):
-        rand = Random.randint(1, 1000)
+        rand = random.randint(1, 1000)
 
         # 自定义文件名称
         filename = os.path.basename(image)
